@@ -1,0 +1,12 @@
+.mypy_cache
+.pytest_cache
+.venv
+.gitignore
+Makefile
+pyproject.toml
+README.md
+requirements.in
+requirements-dev.in
+requirements-dev.txt
+.flake8
+.editorconfig

@@ -1,0 +1,27 @@
+# fly.toml file generated for fly-fastapi on 2022-06-10T02:15:36+06:00
+
+app = "fly-fastapi"
+kill_signal = "SIGINT"
+kill_timeout = 5
+
+[env]
+  PORT = "5000"
+
+[[services]]
+  internal_port = 5000
+  protocol = "tcp"
+  [services.concurrency]
+    hard_limit = 25
+    soft_limit = 20
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = "80"
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = "443"
+
+[[statics]]
+  guest_path = "/app/public"
+  url_prefix = "/static/"

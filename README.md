@@ -7,7 +7,7 @@
 
 </div>
 
-## Test the deployed app
+## Checkout the deployed app
 
 * To access the deployed OpenAPI docs provided by FastAPI, go to
 [https://fly-fastapi.fly.dev/docs](https://fly-fastapi.fly.dev/docs).
@@ -28,7 +28,7 @@ This will return:
 }
 ```
 
-## Test locally
+## Run the app locally
 
 Make sure you have the lastest version of [Docker](https://www.docker.com/) and `docker-compose` (v2) installed.
 

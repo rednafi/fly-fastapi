@@ -56,7 +56,7 @@ Make sure you have the lastest version of [Docker](https://www.docker.com/) and 
     ```
 
     This will return:
-
+    
     ```
     tests/test_main.py::test_auth_error PASSED
     tests/test_main.py::test_ok PASSED

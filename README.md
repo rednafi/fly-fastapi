@@ -45,18 +45,15 @@ Make sure you have the lastest version of [Docker](https://www.docker.com/) and 
 
 * Create and activate a virtual environment.
 * Install the dependencies, run:
-
     ```bash
     pip install -r requirements.txt -r requirements-dev.txt
     ```
 * Run the tests:
-
     ```bash
     pytest -s -v
     ```
 
     This will return:
-
     ```
     tests/test_main.py::test_auth_error PASSED
     tests/test_main.py::test_ok PASSED

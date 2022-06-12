@@ -15,13 +15,13 @@
 leverages HTTP basic auth. The username is `ubuntu` and password is `debian`.
 * Or, you can use cURL to test the endpoint:
 
-```
+```bash
 curl -X GET https://fly-fastapi.fly.dev/greetings -u ubuntu:debian
 ```
 
 This will return:
 
-```
+```json
 {
   "ok": true,
   "message": "Hello from Fly!"
@@ -35,7 +35,7 @@ Make sure you have the lastest version of [Docker](https://www.docker.com/) and 
 * Clone the repo.
 * Head over to the root directory.
 * Run:
-    ```
+    ```bash
     docker compose up
     ```
 * Go to [http://localhost:5000/docs](http://localhost:5000/docs) in your browser.
@@ -46,17 +46,17 @@ Make sure you have the lastest version of [Docker](https://www.docker.com/) and 
 * Create and activate a virtual environment.
 * Install the dependencies, run:
 
-    ```
+    ```bash
     pip install -r requirements.txt -r requirements-dev.txt
     ```
 * Run the tests:
 
-    ```
+    ```bash
     pytest -s -v
     ```
 
     This will return:
-    
+
     ```
     tests/test_main.py::test_auth_error PASSED
     tests/test_main.py::test_ok PASSED

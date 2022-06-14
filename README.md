@@ -15,18 +15,18 @@
 leverages HTTP basic auth. The username is `ubuntu` and password is `debian`.
 * Or, you can use cURL to test the endpoint:
 
-```bash
-curl -X GET https://fly-fastapi.fly.dev/greetings -u ubuntu:debian
-```
+    ```bash
+    curl -X GET https://fly-fastapi.fly.dev/greetings -u ubuntu:debian
+    ```
 
-This will return:
+    This will return:
 
-```json
-{
-  "ok": true,
-  "message": "Hello from Fly!"
-}
-```
+    ```json
+    {
+    "ok": true,
+    "message": "Hello from Fly!"
+    }
+    ```
 
 ## Run the app locally
 

@@ -23,8 +23,8 @@ leverages HTTP basic auth. The username is `ubuntu` and password is `debian`.
 
     ```json
     {
-    "ok": true,
-    "message": "Hello from Fly!"
+      "ok": true,
+      "message": "Hello from Fly!"
     }
     ```
 

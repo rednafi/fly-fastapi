@@ -11,7 +11,7 @@
 
 * To access the deployed OpenAPI docs provided by FastAPI, go to
 [https://fly-fastapi.fly.dev/docs](https://fly-fastapi.fly.dev/docs).
-* Use the doc to make request to the `GET /greetings` API endpoint. This endpoint
+* Use the doc to make requests to the `GET /greetings` API endpoint. This endpoint
 leverages HTTP basic auth. The username is `ubuntu` and password is `debian`.
 * Or, you can use cURL to test the endpoint:
 

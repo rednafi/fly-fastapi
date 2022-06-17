@@ -1,13 +1,6 @@
 name: Run Tests
 
 on:
-  release:
-    types: [published]
-    branches:
-      - main
-    tags:
-      - "v*"
-
   push:
     branches:
       - main
@@ -28,19 +21,19 @@ concurrency:
   group: ${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
 
+env:
+  FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+
 jobs:
-  run-tests:
-    runs-on: ${{ matrix.os }}
+  test:
+    runs-on: ubuntu-latest
     strategy:
       # Use matrix strategy to run the tests on multiple Py versions on multiple OSs.
       matrix:
-        os: [ubuntu-latest, macos-latest]
         python-version: ["3.10"]
         include:
-        - os: ubuntu-latest
-          path: ~/.cache/pip
-        - os: macos-latest
-          path: ~/Library/Caches/pip
+          - os: ubuntu-latest
+            path: ~/.cache/pip
 
     steps:
       - uses: actions/checkout@v3
@@ -66,3 +59,12 @@ jobs:
         run: |
           echo "Running the tests..."
           python -m pytest -v -s
+
+  deploy:
+    if: startsWith(github.event.ref, 'refs/tags/v')
+    name: Deploy app
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+      - run: flyctl deploy --remote-only

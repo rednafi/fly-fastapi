@@ -7,7 +7,6 @@
 
 </div>
 
-
 [Fly.io](https://fly.io/) is a neat way to quickly deploy your application. I wanted to
 take it for a spin and deploy a small Python app for a starter. By default, it supports
 deploying apps built with frameworks like Express, Nuxt, Django, Rails, etc. However, I

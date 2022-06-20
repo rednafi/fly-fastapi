@@ -8,12 +8,13 @@
 </div>
 
 [Fly.io](https://fly.io/) is a neat way to quickly deploy your application. I wanted to
-take it for a spin and deploy a small Python app for a starter. By default, it supports
+take it for a spin and deploy a small Python app for starters. By default, it supports
 deploying apps built with frameworks like Express, Nuxt, Django, Rails, etc. However, I
 wanted to see if I can make it work with a small app built with FastAPI.
 
 Turns out, if you can Dockerize your app, you can deploy it with Fly.io regardless of
-the stack.
+the stack. Also, the deployment is completely automatic here; it's done by GitHub Action
+and the deployment only kicks in if the corresponding commit has a tag `v*`.
 
 ## Checkout the deployed app
 
@@ -76,7 +77,12 @@ Make sure you have the lastest version of [Docker](https://www.docker.com/) and 
 ## Todo
 
 * Add cloudflare caching and DDOS protection.
-* Deploy via GitHub action. Currently, this is deployed via `flyctl`.
+~~* Deploy via GitHub action. Currently, this is deployed via `flyctl`.~~
+
+## Resources
+
+* [Deploy a Python application via Fly](https://fly.io/docs/getting-started/python/)
+* [Automate the deployment with GitHub Action](https://fly.io/docs/app-guides/continuous-deployment-with-github-actions/)
 
 
 <div align="center">

@@ -14,7 +14,8 @@ wanted to see if I can make it work with a small app built with FastAPI.
 
 Turns out, if you can Dockerize your app, you can deploy it with Fly.io regardless of
 the stack. Also, the deployment is completely automatic here; it's done by GitHub Action
-and the deployment only kicks in if the corresponding commit has a tag `v*`.
+and the deployment only kicks in if the corresponding commit has a tag that starts
+with `v*`.
 
 ## Checkout the deployed app
 

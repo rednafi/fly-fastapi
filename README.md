@@ -78,7 +78,7 @@ Make sure you have the lastest version of [Docker](https://www.docker.com/) and 
 ## Todo
 
 * Add cloudflare caching and DDOS protection.
-~~* Deploy via GitHub action. Currently, this is deployed via `flyctl`.~~
+* ~~Deploy via GitHub action. Currently, this is deployed via `flyctl`.~~
 
 ## Resources
 

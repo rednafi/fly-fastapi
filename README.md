@@ -12,17 +12,17 @@ take it for a spin and deploy a small Python app for starters. By default, it su
 deploying apps built with frameworks like Express, Nuxt, Django, Rails, etc. However, I
 wanted to see if I can make it work with a small app built with FastAPI.
 
-Turns out, if you can Dockerize your app, you can deploy it with Fly.io regardless of
+Turns out that if you can Dockerize your app, you can deploy it with Fly.io regardless of
 the stack. Also, the deployment is completely automatic here; it's done by GitHub Action
 and the deployment only kicks in if the corresponding commit has a tag that starts
 with `v*`.
 
-## Checkout the deployed app
+## Check out the deployed app
 
 * To access the deployed OpenAPI docs provided by FastAPI, go to
 [https://fly-fastapi.fly.dev/docs](https://fly-fastapi.fly.dev/docs).
 * Use the doc to make requests to the `GET /greetings` API endpoint. This endpoint
-leverages HTTP basic auth. The username is `ubuntu` and password is `debian`.
+leverages HTTP basic auth. The username is `ubuntu` and the password is `debian`.
 * Or, you can use cURL to test the endpoint:
 
     ```bash
@@ -42,7 +42,7 @@ money; you can still test it out locally.
 
 ## Run the app locally
 
-Make sure you have the lastest version of [Docker](https://www.docker.com/) and `docker-compose` (v2) installed.
+Make sure you have the latest version of [Docker](https://www.docker.com/) and `docker-compose` (v2) installed.
 
 * Clone the repo.
 * Head over to the root directory.
@@ -77,7 +77,7 @@ Make sure you have the lastest version of [Docker](https://www.docker.com/) and 
 
 ## Todo
 
-* Add cloudflare caching and DDOS protection.
+* Add Cloudflare caching and DDOS protection.
 * ~~Deploy via GitHub action. Currently, this is deployed via `flyctl`.~~
 
 ## Resources

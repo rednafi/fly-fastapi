@@ -7,10 +7,11 @@
 
 </div>
 
-[Fly.io](https://fly.io/) is a neat way to quickly deploy your application. I wanted to
-take it for a spin and deploy a small Python app for starters. By default, it supports
-deploying apps built with frameworks like Express, Nuxt, Django, Rails, etc. However, I
-wanted to see if I can make it work with a small app built with FastAPI.
+[Fly.io](https://fly.io/) is a neat service that allows you to quickly deploy your application in the clould. I wanted to take it for a spin and deploy a small Python app
+for starters. By default, it supports deploying apps built with frameworks like Express,
+Nuxt, Django, Rails, etc. However, I wanted to see if I can make it work with a small
+app built with [FastAPI](https://fastapi.tiangolo.com/) and serve it via
+[Uvicorn](https://www.uvicorn.org/)-[Gunicorn](https://gunicorn.org/) combo.
 
 Turns out that if you can Dockerize your app, you can deploy it with Fly.io regardless of
 the stack. Also, the deployment is completely automatic here; it's done by GitHub Action

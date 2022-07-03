@@ -25,3 +25,7 @@ kill_timeout = 5
 [[statics]]
   guest_path = "/app/public"
   url_prefix = "/static/"
+
+[mounts]
+source="fly_fastapi_data"
+destination="/data"

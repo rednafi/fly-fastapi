@@ -1,3 +1,4 @@
+import sys
 from http import HTTPStatus
 
 from fastapi.testclient import TestClient
@@ -21,4 +22,9 @@ def test_ok():
         "/greetings", verify=False, auth=HTTPBasicAuth("ubuntu", "debian")
     )
     assert response.status_code == HTTPStatus.OK
-    assert response.json() == {"ok": True, "message": "Hello from Fly!"}
+    assert response.json() == {
+        "ok": True,
+        "status_code": HTTPStatus.OK,
+        "message": "Hello from Fly!",
+        "python_version": sys.version,
+    }

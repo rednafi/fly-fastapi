@@ -62,6 +62,7 @@ jobs:
 
   deploy:
     if: startsWith(github.event.ref, 'refs/tags/v')
+    needs: test
     name: Deploy app
     runs-on: ubuntu-latest
     steps:

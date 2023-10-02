@@ -7,7 +7,7 @@
 
 </div>
 
-[Fly.io](https://fly.io/) is a neat service that allows you to quickly deploy your 
+[Fly.io](https://fly.io/) is a neat service that allows you to quickly deploy your
 application in the cloud. I wanted to take it for a spin and deploy a small Python app
 for starters. By default, it supports deploying apps built with frameworks like Express,
 Nuxt, Django, Rails, etc. However, I wanted to see if I can make it work with a small
